@@ -1,12 +1,4 @@
-<?php
-  /* if (isset($_POST["username"])) {
-	mysql_connect("localhost", "root", "samurai") or die(mysql_error());
-	mysql_select_db("samurai_dojo_scavenger");
-	$resultset = mysql_query("select * from partners_data where username = '".$_POST["username"]."';") or die(mysql_error());
-	#do something with this here!
-	$result = mysql_fetch_assoc($resultset);
-     } */
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 	
 <!-- ==========================================================	-->
 <!--	Created by Devit Schizoper                          	-->
@@ -47,7 +39,8 @@
 href="javascript:ts('body',-1)">[-]</a></div>
 <div id="left">
 <h2>Partners' Main Page</h2>
-<p>Hello user <?php echo($_GET["username"]);?>. Access code 014 is daca41214b39c5dc66674d09081940f0</p>
+<p>Hello user <?php echo($_GET["username"]);?>. <?php if ($_GET["username"] == 'key') { echo 'Access code 14 is daca41214b39c5dc66674d09081940f0.'; } else { echo 'There are no messages for you at this time.'; }
+?></p>
 <hr>
 <p>Right now we have decided to not offer any services to our partners.  If you want, email <a href="mailto:kevin@dojo">Kevin Flynn</a>
  </div>
