@@ -1,5 +1,5 @@
 <?php
-    if (!empty($_POST["username"])) {
+    if (!empty($_POST["username"]) and !empty($_POST["password"])) {
         mysql_connect("localhost", "root", "samurai") or die(mysql_error());
         mysql_select_db("samurai_dojo_scavenger");
         $resultset = mysql_query("select * from partners_data where username = '".$_POST["username"]."';") or die(mysql_error());
