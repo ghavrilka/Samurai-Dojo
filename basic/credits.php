@@ -20,7 +20,7 @@ of the idea.</p>
 // Begin hints section
 if ($_COOKIE["showhints"]==1) {
 	echo '<p><span style="background-color: #FFFF00">
-	<b>For Unvalidated Redirects and Forwards:</b>  Unvalidated redirects can make the job of Phishers easier since the URL can be made to look like part of a trusted site. Notice how this page used “redirectandlog.php?forwardurl=” to send a user to another site, and log where it went. A Phisher could use this forward mechanism to make a Phishing URL look more legitimate. 
+	<b>For Unvalidated Redirects and Forwards:</b>  Unvalidated redirects can make the job of Phishers easier since the URL can be made to look like part of a trusted site. Notice how this page used "redirectandlog.php?forwardurl=" to send a user to another site, and log where it went. A Phisher could use this forward mechanism to make a Phishing URL look more legitimate. 
 	</span>'; 
 }
 // End hints section
