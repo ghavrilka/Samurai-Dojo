@@ -1,20 +1,20 @@
-<VirtualHost 127.42.84.1:80>
+<VirtualHost *:80>
 	ServerAdmin webmaster@localhost
+	ServerName dojo-basic
 
-#	Redirect permanent / https://dojo-basic/
+	#Redirect permanent / https://dojo-basic/
 
-	DocumentRoot /usr/share/samurai-dojo/basic
+	DocumentRoot /srv/www/samurai-dojo/basic
 
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
 
-	<Directory /usr/share/samurai-dojo/basic/>
+	<Directory /srv/www/samurai-dojo/basic/>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride None
-		Order allow,deny
-		allow from all
+		Require all granted
 	</Directory>
 
 	ErrorLog ${APACHE_LOG_DIR}/dojo-basic-error.log
@@ -27,33 +27,32 @@
 
 </VirtualHost>
 
-<VirtualHost 127.42.84.1:443>
-        ServerAdmin webmaster@localhost
+<VirtualHost *:443>
+	ServerAdmin webmaster@localhost
+	ServerName dojo-basic
 
-        DocumentRoot /usr/share/samurai-dojo/basic
+	DocumentRoot /srv/www/samurai-dojo/basic
 
-        <Directory />
-                Options FollowSymLinks
-                AllowOverride None
-        </Directory>
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
 
-        <Directory /usr/share/samurai-dojo/>
-                Options Indexes FollowSymLinks MultiViews
-                AllowOverride None
-                Order allow,deny
-                allow from all
-        </Directory>
-	
+	<Directory /srv/www/samurai-dojo/basic/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Require all granted
+	</Directory>
+
 	SSLEngine on
-        SSLCertificateFile    /usr/share/samurai-dojo/ssl.crt
+	SSLCertificateFile    /srv/www/samurai-dojo/ssl.crt
 
-        ErrorLog ${APACHE_LOG_DIR}/dojo-basic-error.log
+	ErrorLog ${APACHE_LOG_DIR}/dojo-basic-error.log
 
-        # Possible values include: debug, info, notice, warn, error, crit,
-        # alert, emerg.
-        LogLevel warn
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
 
-        CustomLog ${APACHE_LOG_DIR}/dojo-basic-access.log combined
+	CustomLog ${APACHE_LOG_DIR}/dojo-basic-access.log combined
 
 </VirtualHost>
-

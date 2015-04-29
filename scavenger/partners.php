@@ -1,6 +1,6 @@
 <?php
     if (!empty($_POST["username"]) and !empty($_POST["password"])) {
-        mysql_connect("localhost", "root", "samurai") or die(mysql_error());
+        mysql_connect("localhost", "root", "pwaptadmin") or die(mysql_error());
         mysql_select_db("samurai_dojo_scavenger");
         $resultset = mysql_query("select * from partners_data where username = '".$_POST["username"]."';") or die(mysql_error());
         $result = mysql_fetch_assoc($resultset);
@@ -42,7 +42,7 @@
 <li><a href="products.php">products</a></li>
 <li><a href="partners.php" class="current">partners</a></li>
 <li><a href="support.php">support</a></li>
-<li><a href="contactus">contact</a></li>
+<li><a href="contactus.php">contact</a></li>
 </ul>
 </div>
 </div>

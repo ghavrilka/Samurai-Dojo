@@ -34,12 +34,12 @@
 <h2><a href="/" title="Back to main page">Samurai Dojo</a></h2>
 <div id="menu">
 <ul>
-<li><a href="/" class="current">home</a></li>
+<li><a href="/">home</a></li>
 <li><a href="aboutus.php">about</a></li>
 <li><a href="products.php">products</a></li>
 <li><a href="partners.php">partners</a></li>
 <li><a href="support.php">support</a></li>
-<li><a href="contactus">contact</a></li>
+<li><a href="contactus.php" class="current">contact</a></li>
 </ul>
 </div>
 </div>

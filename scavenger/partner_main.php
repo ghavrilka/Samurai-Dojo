@@ -30,7 +30,7 @@
 <li><a href="products.php">products</a></li>
 <li><a href="partners.php" class="current">partners</a></li>
 <li><a href="support.php">support</a></li>
-<li><a href="contactus">contact</a></li>
+<li><a href="contactus.php">contact</a></li>
 </ul>
 </div>
 </div>

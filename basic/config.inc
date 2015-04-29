@@ -1,6 +1,6 @@
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'samurai';
+$dbpass = 'pwaptadmin';
 $dbname = 'samurai_dojo_basic';
 ?>
