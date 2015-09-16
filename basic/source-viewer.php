@@ -15,7 +15,7 @@ foreach (new MyDirectoryIterator('.') as $fileInfo) {
 }
 ?>
 	</select></p>
-	<p><input type="submit" value="Submit" name="submit"></p>
+	<p><input type="submit" value="Submit" name="Submit_button"></p>
 </form>
 <?php
 // Grab inputs

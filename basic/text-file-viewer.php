@@ -17,7 +17,7 @@ echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER
 	<option value="http://dojo-basic/readingroom/hacking101.hac">HACKING 101 - By Johnny Rotten - Course #1 - Hacking, Telenet, Life
 	</option>
 	</select></p>
-	<p><input type="submit" value="Submit" name="B1"></p>
+	<p><input type="submit" value="Submit" name="Submit_button"></p>
 </form>
 <pre>
 <?php

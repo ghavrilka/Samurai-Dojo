@@ -97,6 +97,7 @@ if ($dosomething  == "logout") {
 		<a href="?page=user-info.php">User Info</a><br>
 		<a href="?page=add-to-your-blog.php">Blog Entry</a><br>
 		<a href="?page=view-someones-blog.php">View Blogs</a><br>
+		<a href="?page=text-file-uploader.php">Upload Files</a><br>
 		<a href="?page=text-file-viewer.php">Reading Room</a><br>
 		<a href="snake/">Play Snake</a><br>
 <?php } ?>
