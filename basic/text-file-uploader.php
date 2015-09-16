@@ -3,13 +3,14 @@
 Upload text files for access via the Reading Room.
 
 <?php
-echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'] . "\">";
+echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'] . "\" enctype=\"multipart/form-data\">";
 ?>
     <p><input type="file" name="filename"></p>
     <p><input type="submit" value="Submit" name="Submit_button"></p>
 </form>
 <pre>
 <?php
+if(isset($_POST["Submit_button"])) {
 $target_dir = "readingroom/";
 $target_file = $target_dir . basename($_FILES["filename"]["name"]);
 $uploadOk = 1;
@@ -51,5 +52,6 @@ if ($uploadOk == 0) {
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
+}
 }
 ?>
