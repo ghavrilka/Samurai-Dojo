@@ -42,13 +42,18 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }*/
+// Incorrectly apply file extension white-listing
+if (!preg_match("/\.txt/", basename($_FILES["filename"]["name"])) {
+    echo "Invalid file extension. Only *.txt files can be uploaded.";
+    exit;
+}
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["filename"]["name"]). " has been uploaded. A moderator will review the file shortly.";
+        echo "The file ". basename($_FILES["filename"]["name"]). " has been uploaded. A moderator will review the file shortly.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
