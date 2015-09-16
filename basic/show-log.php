@@ -1,4 +1,4 @@
-<center><h2><b>Showing Log</b></h2></center><p>
+<center><h2><b>Log Viewer</b></h2></center><p>
 <?php
 $query = "SELECT * FROM `hitlog`";
 $result = mysql_query($query) or die(mysql_error($conn) . '<p><b>SQL Statement:</b>' . $query);;

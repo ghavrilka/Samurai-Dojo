@@ -4,7 +4,7 @@
 echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'] . "\">";
 ?>
 
-	<p>Who would you like to do a DNS lookup on? Give me an IP or hostname:</p>
+	<p>Who would you like to do a DNS lookup on? Enter an IP or hostname.</p>
 	<p><input type="text" name="target_host" size="20"></p>
 	<p><input type="submit" value="Submit" name="Submit_button"></p>
 	

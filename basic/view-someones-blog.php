@@ -1,4 +1,4 @@
-<center><h2><b>Viewing blog</b></h2></center><p>
+<center><h2><b>View Blogs</b></h2></center><p>
 
 <?php
 echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'] . "\">";
@@ -6,15 +6,16 @@ echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER
 $query  = "SELECT * FROM accounts";
 $result = mysql_query($query) or die(mysql_error($conn) . '<p><b>SQL Statement:</b>' . $query);;
 //echo $result;
-echo '<p>Show only:<select size="1" name="show_only_user">';
-echo '<option value="">Choose someone</option>\n';
-echo '<option value="Show All Users">Show All Users</option>\n';
+echo '<p>Select a blog to read.</p>';
+echo '<p><select size="1" name="show_only_user">';
+echo '<option value="Show All Users">Show All Users</option>';
 while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 {
-    echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>\n';
+    echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
 
 }
-echo '</select><input type="submit" value="Submit" name="Submit_button">';
+echo '</select></p>';
+echo '<p><input type="submit" value="Submit" name="Submit_button"></p>';
 
 ?>
 <?php

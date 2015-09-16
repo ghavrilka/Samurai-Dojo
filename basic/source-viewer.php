@@ -1,6 +1,6 @@
-<center><h2><b>See the source for some of our cool apps</b></h2></center><p>
+<center><h2><b>Source Viewer</b></h2></center><p>
 
-Just choose one form the list and submit.
+Select an application source code file to view.
 
 <?php
 echo "<form method=\"GET\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'] . "\">";

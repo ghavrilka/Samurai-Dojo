@@ -1,10 +1,10 @@
-<center><h2><b>Add to your blog</b></h2></center><p>
+<center><h2><b>Blog Entry</b></h2></center><p>
 
 <?php
 echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'] . "\">";
 ?>
 
-	<p>Welcome to your blog, leave an entry. Login, or you will be listed as "anonymous":</p>
+	<p>Welcome to your blog, leave an entry. Login, or you will be listed as "anonymous".</p>
 	<!--<p><input type="text" name="user_name" size="20"></p> -->
 	<p><textarea rows="10" cols="50" name="input" size="20"></textarea></p>
 	<p><input type="submit" value="Submit" name="Submit_button"></p>
