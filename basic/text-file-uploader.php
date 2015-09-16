@@ -43,7 +43,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
     $uploadOk = 0;
 }*/
 // Incorrectly apply file extension white-listing
-if (!preg_match("/\.txt/", basename($_FILES["filename"]["name"])) {
+if (!preg_match("/\.txt/", basename($_FILES["filename"]["name"]))) {
     echo "Invalid file extension. Only *.txt files can be uploaded.";
     exit;
 }

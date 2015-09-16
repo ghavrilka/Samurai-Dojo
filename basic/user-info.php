@@ -9,7 +9,7 @@ $cid = base64_decode($_COOKIE["uid"]);
 if ($password <> "") {
 	$query = "UPDATE accounts SET password='" . $password . "', mysignature='" . $signature . "' WHERE cid='" . $cid . "'";
 	$result = mysql_query($query) or die(mysql_error($conn) . '<p><b>SQL Statement:</b>' . $query);
-	header("Location: ".$_SERVER['SCRIPT_NAME']."?".$_SERVER['QUERY_STRING']);
+	header("Location: ".$_SERVER['SCRIPT_NAME']."?page=".basename(__FILE__));
 }
 ?>
 
@@ -19,7 +19,6 @@ $result = mysql_query($query) or die(mysql_error($conn) . '<p><b>SQL Statement:<
 if (mysql_num_rows($result) > 0) {
 	while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 		echo "<form method=\"POST\" action=\"{$_SERVER['SCRIPT_NAME']}?{$_SERVER['QUERY_STRING']}\">";
-		echo "<p>Username:</p><p>{$row['username']}</p>";
 		echo "<p>Password:</p><p><input type=\"password\" name=\"password\" value=\"{$row['password']}\"></p>";
 		echo "<p>Signature:</p><p><input type=\"text\" name=\"signature\" value=\"{$row['mysignature']}\"></p>";
 		echo "<p><input type=\"submit\" name=\"Submit_button\" value=\"Update\"></p>";
