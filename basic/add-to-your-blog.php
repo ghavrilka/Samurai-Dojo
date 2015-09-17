@@ -13,7 +13,6 @@ echo "<form method=\"POST\" action=\"" .$_SERVER['SCRIPT_NAME'] . "?" . $_SERVER
 <?php
 // Grab inputs
 $inputfromform = mysql_real_escape_string($_REQUEST["input"]);
-$showonlyuser =  $_REQUEST["show_only_user"];
 
 if ($inputfromform  <> "") {
 	$query = "INSERT INTO blogs_table(blogger_name, comment, date) VALUES ('".
